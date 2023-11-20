@@ -17,7 +17,6 @@ jobs:
         with:
           title: Merge changes to DEV stage
           branch: update-stages/dev
-          delete-branch: true
           base: stages/dev
 
       - name: Merge changes to QA
@@ -25,5 +24,4 @@ jobs:
         with:
           title: Merge changes to QA stage
           branch: update-stages/qa
-          delete-branch: true
           base: stages/qa
