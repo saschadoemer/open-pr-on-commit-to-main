@@ -16,7 +16,7 @@ jobs:
 
       - name: Fetch latest changes from main
         run: |
-          git fetch origin main:main
+          git pull origin main:main
 
       - name: Merge changes to DEV
         uses: peter-evans/create-pull-request@v5.0.2
