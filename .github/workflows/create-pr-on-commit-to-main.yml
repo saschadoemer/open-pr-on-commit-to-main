@@ -1,4 +1,4 @@
-name: Add changes to release stages
+name: Add changes to DEV stage
 
 on:
   push:
@@ -6,22 +6,15 @@ on:
       - main
 
 jobs:
-  merge-changes-to-all-stages:
+  merge-changes-to-dev:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: stages/dev
 
       - name: Merge changes to DEV
         uses: peter-evans/create-pull-request@v5.0.2
         with:
           title: Merge changes to DEV stage
-          branch: main
-          base: stages/dev
-
-      - name: Merge changes to QA
-        uses: peter-evans/create-pull-request@v5.0.2
-        with:
-          title: Merge changes to QA stage
-          branch: main
-          base: stages/qa
