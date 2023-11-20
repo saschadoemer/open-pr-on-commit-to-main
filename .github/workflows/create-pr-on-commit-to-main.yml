@@ -11,14 +11,14 @@ jobs:
     steps:
       - uses: checkout@v4
       - name: Merge changes to DEV
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v5.0.2
         with:
           title: Merge changes to DEV stage
           branch: update-stages/dev
           delete-branch: true
           base: stages/dev
       - name: Merge changes to QA
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v5.0.2
         with:
           title: Merge changes to QA stage
           branch: update-stages/qa
