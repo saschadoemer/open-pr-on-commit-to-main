@@ -16,12 +16,12 @@ jobs:
         uses: peter-evans/create-pull-request@v5.0.2
         with:
           title: Merge changes to DEV stage
-          branch: update-stages/dev
+          branch: main
           base: stages/dev
 
       - name: Merge changes to QA
         uses: peter-evans/create-pull-request@v5.0.2
         with:
           title: Merge changes to QA stage
-          branch: update-stages/qa
+          branch: main
           base: stages/qa
