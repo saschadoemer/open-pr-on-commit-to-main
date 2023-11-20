@@ -18,7 +18,8 @@ jobs:
           branch: update-stages/dev
           delete-branch: true
           base: stages/dev
-      - uses: peter-evans/create-pull-request@v5
+      - name: Merge changes to QA
+        uses: peter-evans/create-pull-request@v5
         with:
           title: Merge changes to QA stage
           branch: update-stages/qa
