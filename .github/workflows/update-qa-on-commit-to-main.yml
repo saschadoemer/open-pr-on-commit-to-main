@@ -1,4 +1,4 @@
-name: Add changes to DEV stage
+name: Add changes to QA stage
 
 on:
   push:
